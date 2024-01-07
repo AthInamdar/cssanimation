@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0c192c;
+
+}
+
+.box {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+img {
+    position: fixed;
+    height: 150px;
+    padding-right: 5vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #FFD700;
+    margin: 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #FFD70050,
+    0 0 50px #FFD700,
+    0 0 75px #FFD700,
+    0 0 100px #FFD700;
+    animation: animate 15s ease-out infinite;
+    animation-duration: calc(120s / var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.bubbles span:nth-child(even) {
+    background: #C0C0C0;
+    box-shadow: 0 0 0 10px #C0C0C050,
+    0 0 50px #C0C0C0,
+    0 0 75px #C0C0C0,
+    0 0 100px #C0C0C0;
+}
+
+.lable {
+    display: flex;
+    background: transparent;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.lable h1 {
+    position: relative;
+    color: aliceblue;
+    
+    font-size: 4rem;
+    font-family:sans-serif, Arial;
+}
+
+
